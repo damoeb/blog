@@ -1,0 +1,5 @@
+.idea
+*.iml
+public
+themes/
+resources/_gen

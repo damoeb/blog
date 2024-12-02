@@ -1,0 +1,91 @@
+baseURL: "https://examplesite.com"
+title: Blog by Markus Ruepp
+paginate: 10
+theme: hugo-PaperMod
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+googleAnalytics: UA-123-45
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: Blog by Markus Ruepp
+  description: "I write about technical things and my side projects"
+  author: Markus Ruepp
+  # author:["Me", "You"] # multiple authors
+
+#  images: "<link or path of image for opengraph, twitter-cards>"
+
+  ShowReadingTime: true
+  ShowShareButtons: false
+  comments: false
+  defaultTheme: auto
+  disableThemeToggle: false
+  disableSpecial1stPost: false
+
+
+  label:
+    text: "Blog"
+#    icon: /apple-touch-icon.png
+#    iconHeight: 35
+
+  # profile-mode
+  profileMode:
+    enabled: false # needs to be explicitly set
+    title: migor blog
+    # imageUrl: '<img location>'
+    # imageTitle: my image
+    buttons:
+      - name: Posts
+        url: posts
+      - name: Tags
+        url: tags
+
+  # home-info mode
+  homeInfoParams:
+    Title: "I’m Markus Ruepp, a software engineer"
+    Content: I am living and working in Zurich. Visit my side-project [rss-proxy](https://github.com/damoeb/rss-proxy).
+
+  socialIcons:
+    - name: twitter
+      url: "https://twitter.com/damoeb"
+    - name: github
+      url: "https://github.com/damoeb"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/markus-ruepp-5b87a793/"
+
+#  analytics:
+#    google:
+#      SiteVerificationTag: "XYZabc"
+
+menu:
+  main:
+    - identifier: archive
+      name: Archive
+      url: /archives/
+      weight: 11
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 10
+#    - identifier: tags
+#      name: Tags
+#      url: /tags/
+#      weight: 20
+    - identifier: feed
+      name: RSS Feed
+      url: /index.xml
+      weight: 30
